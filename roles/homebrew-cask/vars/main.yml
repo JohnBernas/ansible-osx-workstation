@@ -1,0 +1,10 @@
+---
+ homebrew_cask_packages:
+  - dropbox
+  - alfred
+  - caffeine
+  - google-chrome
+  - firefox
+  - sublime-text3
+  - nvalt
+  - iterm2
