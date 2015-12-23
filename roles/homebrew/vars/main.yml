@@ -1,0 +1,12 @@
+---
+homebrew_install_path: /usr/local
+homebrew_brew_bin_path: /usr/local/bin
+
+homebrew_taps:
+ - caskroom/cask
+ - caskroom/versions
+ - homebrew/versions
+ - homebrew/binary
+
+homebrew_packages:
+ - { name: brew-cask }
