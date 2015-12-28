@@ -1,10 +1,19 @@
 ---
  homebrew_cask_packages:
-  - dropbox
   - alfred
+  - dropbox
+  - omnifocus
+  - textexpander
+  - nvalt
+  - screenhero
+  - iterm2
+  #- intellij-idea
+  - sublime-text3
+  - rowanj-gitx
   - caffeine
   - google-chrome
   - firefox
-  - sublime-text3
-  - nvalt
-  - iterm2
+  - skype
+  - vlc
+  - sizeup
+  - transmission

@@ -10,3 +10,5 @@ homebrew_taps:
 
 homebrew_packages:
  - { name: brew-cask }
+ - { name: wget }
+ - { name: heroku-toolbelt }
