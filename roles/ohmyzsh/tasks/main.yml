@@ -1,0 +1,24 @@
+---
+
+- name: Installing oh-my-zsh
+  git:
+    repo: https://github.com/robbyrussell/oh-my-zsh.git
+    dest: "{{ user.home }}/.oh-my-zsh"
+    update: yes
+
+- name: Creating new .zshrc
+  template:
+    src: zshrc.j2
+    dest: "{{ user.home }}/.zshrc"
+    mode: "0644"
+
+- name: Add the proper zsh to /etc/shells
+#  sudo: True
+  lineinfile: 
+    dest: /etc/shells
+    line: "/usr/local/bin/zsh"
+
+- name: Setting default shell
+  user: 
+    name: joao
+    shell: /usr/local/bin/zsh

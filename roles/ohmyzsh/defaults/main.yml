@@ -1,0 +1,9 @@
+---
+
+which_zsh: /usr/local/bin/zsh
+
+
+oh_my_zsh_case_sensitive: "true"
+
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+oh_my_zsh_history_date_format: yyyy-mm-dd

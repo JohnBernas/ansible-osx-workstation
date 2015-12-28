@@ -33,3 +33,4 @@ Don't forget to start up Xcode once it's installed so that you can agree to the 
 ### 6. Run the thing!
 
     ansible-playbook main.yml
+    (ansible-playbook main.yml --ask-sudo-pass)
