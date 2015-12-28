@@ -1,0 +1,9 @@
+---
+
+- name: Create working directories
+  file: 
+    path: "{{ item }}"
+    state: directory
+    owner: "{{ user.username }}"
+    mode: 0755
+  with_items: workspace_directories

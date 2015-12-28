@@ -1,0 +1,8 @@
+---
+
+workspace_directories:
+  - "{{ user.home }}/Work"
+  - "{{ user.home }}/Work/personal"
+  - "{{ user.home }}/Work/oss"
+  - "{{ user.home }}/Work/kabisa"
+  - "{{ user.home }}/Work/tools"
