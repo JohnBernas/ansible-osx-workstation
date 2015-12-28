@@ -3,13 +3,15 @@
 - name: Global Git config
   template:
     src: git.config.j2
-    dest: "/Users/joao/.gitconfig"
-    owner: "joao"
+    dest: "{{ user.home }}/.gitconfig"
+    owner: "{{ user.username }}"
     mode: "0644"
+  with_items: users
 
 - name: Global Git ignore
   template:
     src: git.ignore.j2
-    dest: "/Users/joao/.gitignore"
-    owner: "joao"
+    dest: "{{ user.home }}/.gitignore"
+    owner: "{{ user.username }}"
     mode: "0644"
+  with_items: users
