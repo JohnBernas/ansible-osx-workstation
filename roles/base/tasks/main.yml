@@ -7,3 +7,16 @@
     owner: "{{ user.username }}"
     mode: 0755
   with_items: workspace_directories
+
+- name: Ensure presence of bash files
+  file: 
+    state: touch
+    path: "{{ user.home }}/.{{ item }}"
+  with_items: 
+    - bashrc
+    - bash_profile
+
+- name: Load bashrc in bash_profile
+  lineinfile: 
+    dest: "{{ user.home }}/.bash_profile"
+    line: "if [ -f ~/.bashrc ]; then . ~/.bashrc; fi"
