@@ -1,0 +1,12 @@
+---
+
+chruby_ruby_install_command: /usr/local/bin/ruby-install
+
+rubies:
+  - 2.2.4
+  - 2.3.0
+
+# These ruby versions will be removed if they are found:
+outdated_rubies:
+  #- 2.2.4
+  #- 2.3.0

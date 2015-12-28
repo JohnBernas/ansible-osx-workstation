@@ -11,4 +11,11 @@ homebrew_taps:
 homebrew_packages:
  - { name: brew-cask }
  - { name: wget }
+ # zsh
+ - { name: zsh }
+ - { name: zsh-completions }
+ # Ruby
+ - { name: chruby }
+ - { name: ruby-install }
+ # projects
  - { name: heroku-toolbelt }

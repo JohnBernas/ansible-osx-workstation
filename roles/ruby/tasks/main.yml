@@ -1,0 +1,19 @@
+---
+
+- name: Source chruby
+  lineinfile:
+    dest: "{{ user.home }}/.bashrc"
+    line: "{{ item }}"
+  with_items:
+    - "source '/usr/local/share/chruby/chruby.sh'"
+    - "source '/usr/local/share/chruby/auto.sh'"
+
+- name: Install all the ruby versions
+  command: '{{chruby_ruby_install_command}} ruby {{ item }} --no-reinstall'
+  #when: not ruby_version_folder.stat.exists
+  with_items: rubies
+
+- name: Remove all outdated_ruby versions
+  file: name=/opt/rubies/{{item}} state=absent
+  with_items: outdated_rubies
+  when: outdated_rubies is defined
