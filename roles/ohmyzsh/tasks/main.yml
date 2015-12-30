@@ -12,13 +12,16 @@
     dest: "{{ user.home }}/.zshrc"
     mode: "0644"
 
-- name: Add the proper zsh to /etc/shells
-#  sudo: True
-  lineinfile: 
-    dest: /etc/shells
-    line: "/usr/local/bin/zsh"
+# Setting ZSH as default shell is causing troubles, leaving it out for now.
 
-- name: Setting default shell
-  user: 
-    name: joao
-    shell: /usr/local/bin/zsh
+#- name: Add the proper zsh to /etc/shells
+#  sudo: True
+#  lineinfile:
+#    dest: /etc/shells
+#    line: "/usr/local/bin/zsh"
+
+#- name: Setting default shell
+#  sudo: True
+#  user:
+#    name: joao
+#    shell: /usr/local/bin/zsh
