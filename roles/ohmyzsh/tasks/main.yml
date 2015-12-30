@@ -4,6 +4,7 @@
   git:
     repo: https://github.com/robbyrussell/oh-my-zsh.git
     dest: "{{ user.home }}/.oh-my-zsh"
+    force: yes
     update: yes
 
 - name: Creating new .zshrc
@@ -11,6 +12,26 @@
     src: zshrc.j2
     dest: "{{ user.home }}/.zshrc"
     mode: "0644"
+
+#
+# Custom Plugins
+#
+# I chose to create them in the "main" plugin folder instead of the custom one,
+# as it's much faster at booting zsh
+#
+- name: Creating plugin folder
+  file:
+    path: "{{ user.home }}/.oh-my-zsh/plugins/{{ item }}"
+    state: directory
+    mode: 0755
+  with_items: custom_plugins
+
+- name: Creating plugin file
+  template:
+    src: "plugins/{{ item }}.j2"
+    dest: "{{ user.home }}/.oh-my-zsh/plugins/{{ item }}/{{ item }}.plugin.zsh"
+    mode: "0644"
+  with_items: custom_plugins
 
 # Setting ZSH as default shell is causing troubles, leaving it out for now.
 
