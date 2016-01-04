@@ -14,6 +14,8 @@ homebrew_packages:
  # zsh
  - { name: zsh }
  - { name: zsh-completions }
+ # Java
+ - { name: jenv }
  # Ruby
  - { name: chruby }
  - { name: ruby-install }
