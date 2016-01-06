@@ -10,5 +10,6 @@ ssh_key_path: ~/.ssh/joao
 custom_plugins:
   - navigation
   - my_git
+  - homebrew
 
-included_plugins: "my_git navigation"
+included_plugins: "my_git navigation homebrew"

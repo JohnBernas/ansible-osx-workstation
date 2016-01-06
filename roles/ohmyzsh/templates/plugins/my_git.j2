@@ -1,0 +1,44 @@
+#
+# GIT
+#
+
+alias g='git'
+alias gst='git status -sb'
+
+gp() { git push $1; }
+gpush() { git push $1; }
+gpnew() { git push -u origin $1; }
+gl() { git pull $1; }
+gpull() { git pull $1; }
+
+gco() { git checkout $1; }
+alias gcd='git checkout develop'
+alias gcm='git checkout master'
+gcb() { git checkout -b "$1"; }
+gct() { git checkout -b $1 origin/$1; }
+gctag() { git checkout -b $1 $1; }
+
+gci() {
+    if [ "$1" != "" ]
+    then
+        git commit -m $1
+    else
+        git commit
+    fi
+}
+
+
+gb() { git branch $1; }
+gba() { git branch -a $1; }
+gbdel() { git branch -D $1; }
+
+alias ga='git add'
+gaa() { git add -A $1; }
+alias gap='git add --patch'
+
+gm() { git merge $1; }
+
+gtag() { git tag $1; }
+alias gptag='gpush --tags'
+
+alias gx='gitx --all'
