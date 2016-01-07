@@ -32,5 +32,11 @@ Don't forget to start up Xcode once it's installed so that you can agree to the 
 
 ### 6. Run the thing!
 
-    ansible-playbook main.yml
-    (ansible-playbook main.yml --ask-sudo-pass)
+    ansible-playbook main.yml  --ask-vault-pass
+
+## Handling Encrypted Files
+
+    ansible-vault create foo.yml # create a new vault file
+    ansible-vault edit foo.yml # edit an existing vault file
+    ansible-vault encrypt|decrypt foo.yml # encrypt/decrypt
+    ansible-vault rekey foo.yml # change password on a vault file

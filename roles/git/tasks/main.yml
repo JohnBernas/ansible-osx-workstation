@@ -1,4 +1,7 @@
 ---
+#
+# Configuration
+#
 
 - name: Global Git config
   template:
@@ -15,3 +18,24 @@
     owner: "{{ user.username }}"
     mode: "0644"
   with_items: users
+
+#
+# Clone all the repos
+#
+- name: Include vault
+  include_vars: vault.yml
+
+- name: Making sure path exists
+  file: 
+    path: "{{ item.where }}"
+    state: directory
+    mode: 0755
+  with_items: repos
+
+- name: Cloning repo
+  git:
+    repo: "{{ item.repo }}"
+    dest: "{{ item.where }}"
+    force: yes
+    update: yes
+  with_items: repos

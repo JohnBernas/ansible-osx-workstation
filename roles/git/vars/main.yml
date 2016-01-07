@@ -1,0 +1,9 @@
+---
+
+workspace_directory: "{{ user.home }}/Work"
+kabisa_directory: "{{ workspace_directory }}/kabisa"
+
+public_repos: 
+  - { name: ansible-osx-workstation, repo: "git@github.com:JohnBernas/ansible-osx-workstation.git", where: "{{ workspace_directory }}/personal/ansible-osx-workstation" }
+
+repos: "{{ public_repos + vault_repos }}"
