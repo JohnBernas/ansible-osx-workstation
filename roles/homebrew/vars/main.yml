@@ -7,6 +7,7 @@ homebrew_taps:
  - caskroom/versions
  - homebrew/versions
  - homebrew/binary
+ - homebrew/services
 
 homebrew_packages:
  - { name: brew-cask }
@@ -19,5 +20,12 @@ homebrew_packages:
  # Ruby
  - { name: chruby }
  - { name: ruby-install }
+ - { name: qt }
+ - { name: redis }
+ # Databases
+ - { name: postgres }
+ # Docker
+ - { name: docker-machine }
+ - { name: docker-compose }
  # projects
  - { name: heroku-toolbelt }

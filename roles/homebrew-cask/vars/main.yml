@@ -7,7 +7,8 @@
   - nvalt
   - screenhero
   - iterm2
-  #- intellij-idea
+  - intellij-idea
+  - intellij-idea14
   - sublime-text3
   - rowanj-gitx
   - caffeine
@@ -19,3 +20,4 @@
   - transmission
   - java6
   - java7
+  - virtualbox
